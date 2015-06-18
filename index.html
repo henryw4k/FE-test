@@ -1,16 +1,22 @@
 <!DOCTYPE html> 
-<html>
+<html ng-app='myApp'>
 	<head>
-		<link rel="stylesheet" href="css/styles.css">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
-		</script>
+		<link rel='stylesheet' href='css/styles.css'>
+		<script src= 'http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js'></script>
 	</head>
-	<body>
-		
-		<div id="container"></div>
-	<script type="text/javascript" src="data.js"></script>
-	<script type="text/javascript" src="logic.js"></script>
-
+	<body ng-controller='appCtrl'>
+		<div id='container'>
+			<div class='item' ng-repeat='item in data'>
+				<img class='center' src='{{item.IMI.Image}}'></img>
+				<div class='textBox'>
+					<p class='itemName'>
+						{{item.IMI.Name}} <br>
+						{{item.IMI.Brand}}
+					</p>
+				</div>
+			</div>
+		</div>
+		<script type='text/javascript' src='data.js'></script>
+		<script src='myApp.js'></script>
 	</body>
-
 </html>
