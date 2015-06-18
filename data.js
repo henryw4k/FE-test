@@ -80,17 +80,4 @@ var result = {
 				"Image":"https://stream.inmarkit.com/uploads/mm/P498/6c/GVeGEYz_50x50.jpg"
 			}
 		}]
-};//result
-
-$.each(result.marks, function(index, element){
-		//constructing each item
-		var $item = '<div class="item">'+
-				    '<img class="center" src='+element.IMI.Image+'></img>'+
-				    '<div class="textBox">'+
-				    '<p class="itemName">'+element.IMI.Name+'</br>'+
-				    'from '+element.IMI.Brand+'</p>'+
-				    '</div>'+
-				    '</div>';
-
-		$("#container").append($item);
-});
+};//mark
